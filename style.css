@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@font-face {
+    font-family:'Poppins-Regular';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('.ttf');
+  
+}
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src: url('assets/fonts/Poppins-Italic.ttf') format('.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('assets/fonts/Poppins-Bold.ttf') format('.ttf');
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+:root {
+    --font-label: 'Poppins-Italic', sans-serif;
+}
+
+.calculator__label{
+    font-family: var(--font-label),sans-serif;
+
+}
