@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Age</title>
-    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
     <div class="fundo">
-        <div class="calculator">
-            <div class="calculator__label">
-                <label class="label__day"  for="numday">DAY</label>
-                <label class="label__month" for="nummonth">MONTH</label>
-                <label class="label__year" for="numyear">YEAR</label>
-            </div>
-                <div class="calculator__input">
-                    <input class="input__day" type="text" name="nummonth" id="nummoth" placeholder="MM">
-                    <input class="input__month" type="text" name="numday" id="numday" placeholder="DD">
-                    <input class="input__year" type="text" name="numyear" id="numyear" placeholder="YYYY">
-                    <div class="linha"></div>
-                </div>
-            
-            <div class="resultado">
-                <div class="resultado__year">
-                    <p>--</p>
-                
-                </div>
-                <div class="resultado__months">
-                    <p>--</p>
-                </div>
-                <div class="resultado__days">
-                    <p>--</p>
-                </div>
-            </div>
+      <div class="calculator">
+        <div class="calculator__label">
+          <label class="label__day" for="numday">DAY</label>
+          <label class="label__month" for="nummonth">MONTH</label>
+          <label class="label__year" for="numyear">YEAR</label>
         </div>
+        <div class="calculator__input">
+          <input
+            class="input__day"
+            type="text"
+            name="nummonth"
+            id="nummonth"
+            placeholder="MM"
+          />
+          <input
+            class="input__month"
+            type="text"
+            name="numday"
+            id="numday"
+            placeholder="DD"
+          />
+          <input
+            class="input__year"
+            type="text"
+            name="numyear"
+            id="numyear"
+            placeholder="YYYY"
+          />
+
+          <div class="linha">
+            <button onclick="calcular()" class="botao">
+              <img src="assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="resultado">
+                <div >
+                    <p class="resultado__year">--</p>
+                </div>
+                <div>
+                    <p class="resultado__months">--</p>
+                </div>
+                <div>
+                    <p class="resultado__days">--</p>
+                </div>
+                <div class="box">
+                    <p class="days">days</p>
+                    <p class="months">months</p>
+                    <p class="years">years</p>
+                </div>
+            </div> -->
+        <div class="resultado">
+          <div class="box">
+            <div class="row">
+              <span class="roxo">--</span>
+              <span>years</span>
+            </div>
+            <div class="row">
+              <span class="roxo">--</span>
+              <span>months</span>
+            </div>
+            <div class="row">
+              <span class="roxo">--</span>
+              <span>days</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
