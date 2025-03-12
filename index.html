@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    
   </head>
   <body>
     <div class="fundo">
@@ -21,33 +21,40 @@
           <label class="label__year" for="numyear">YEAR</label>
         </div>
         <div class="calculator__input">
-          <input
+          <input autocomplete="off"
             class="input__day"
             type="text"
             name="nummonth"
             id="nummonth"
             placeholder="MM"
           />
-          <input
+          
+          <input autocomplete="off"
             class="input__month"
             type="text"
             name="numday"
             id="numday"
             placeholder="DD"
           />
-          <input
+          
+          <input autocomplete="off"
             class="input__year"
             type="text"
             name="numyear"
             id="numyear"
             placeholder="YYYY"
           />
-
-          <div class="linha">
-            <button onclick="calcular()" class="botao">
-              <img src="assets/images/icon-arrow.svg" alt="" />
-            </button>
-          </div>
+             <span class="error">this space is incorrect</span>
+             
+            
+          
+          
+          
+        </div>
+        <div class="linha">
+          <button  class="botao">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </button>
         </div>
 
         <!-- <div class="resultado">
@@ -69,16 +76,16 @@
         <div class="resultado">
           <div class="box">
             <div class="row">
-              <span class="roxo">--</span>
-              <span>years</span>
+              <span class="roxo">- -</span>
+              <span class="years">years</span>
             </div>
             <div class="row">
-              <span class="roxo">--</span>
-              <span>months</span>
+              <span class="roxo">- -</span>
+              <span class="months">months</span>
             </div>
             <div class="row">
-              <span class="roxo">--</span>
-              <span>days</span>
+              <span class="roxo">- -</span>
+              <span class="days">days</span>
             </div>
           </div>
         </div>
