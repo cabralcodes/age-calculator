@@ -22,14 +22,10 @@ html * {
   src: url("/assets/fonts/Poppins-Bold.ttf") ;
 }
 
-@font-face {
-  font-family: 'Poppins-ExtraBold';
-  src: url(/assets/fonts/Poppins-ExtraBold.ttf);
-}
 
 @font-face {
   font-family: "Poppins-ExtraBoldItalic";
-  src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+  src: url("/assets/fonts/Poppins-ExtraBoldItalic.ttf");
 }
 
 
@@ -69,17 +65,22 @@ body {
 
 .label__day {
   margin-right: 60px;
+  margin-left: 10px;
 }
 
 .label__month {
   margin-right: 30px;
+  
 }
+
+
 
 .calculator__input {
-
-  margin-left: 10px;
+  
+  margin-left:20px;
 
 }
+
 
 .linha {
   width: 93%; /* Ocupa toda a largura */
@@ -166,7 +167,7 @@ img {
 .months,
 .years {
   display: flex;
-  font-family: 'Poppins-ExtraBoldItalic', sans-serif;
+  font-family: "Poppins-ExtraBoldItalic",sans-serif;
   font-weight: 900;
   font-size: 40px;
 }
@@ -201,22 +202,31 @@ img {
 
 .resultado .box span.roxo {
   color: hsl(259, 100%, 65%);
-  font-family: 'Poppins-ExtraBoldItalic', sans-serif;
+  font-family: "Poppins-ExtraBoldItalic", sans-serif;
   font-size: 50px;
   font-weight: 700;
   padding-right: 10px;
 }
 
-.calculator__input span {
-  display: block;
-  flex-direction: row;
-  font-size: 8px;
+ .erro  {  
+  display: none;
+  font-size: 9px;
   font-family: 'Poppins-Italic', sans-serif;
   font-weight: 600;
   color: rgba(255, 0, 0, 0.918);
 }
 
+.error1-disabled {
+  display: block;
+}
   
+.error2-disabled {
+  display: block;
+}
+
+.error3-disabled{
+  display: block;
+}
 
 @media (min-width:768px) {
   .calculator {
@@ -230,6 +240,32 @@ img {
 
   .calculator__input {
     margin-left: 20px;
+  }
+
+  .erro {
+    display: none;
+  
+  }
+
+  .input__day, .input__month, .input__year {
+    width: 100px;
+  }
+
+ .label__day {
+    margin-right: 80px;
+  }
+
+  .label__month {
+    margin-right: 60px;
+  }
+
+  .error1 {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .error2 {
+    padding-right: 20px;
   }
 
   .linha {
@@ -260,6 +296,11 @@ img {
     width: 600px;
   }
 
+  .input__day, .input__month, .input__year {
+    width: 100px;
+  }
+
+
   .calculator .resultado .box .row span.years  {
     font-size: 50px;
   }
@@ -273,4 +314,6 @@ img {
   .calculator .resultado .box span.roxo {
     font-size: 50px;
   }
+
+
 }
