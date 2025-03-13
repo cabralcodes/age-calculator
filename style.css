@@ -38,7 +38,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: hsl(0, 0%, 86%);
 }
 
 .calculator {
