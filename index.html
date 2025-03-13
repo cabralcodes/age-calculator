@@ -10,7 +10,6 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    
   </head>
   <body>
     <div class="fundo">
@@ -21,40 +20,42 @@
           <label class="label__year" for="numyear">YEAR</label>
         </div>
         <div class="calculator__input">
-          <input autocomplete="off"
+          <input
+            autocomplete="off"
             class="input__day"
+            type="text"
+            name="numday"
+            id="numday"
+            placeholder="DD"
+          />
+
+          <input
+            autocomplete="off"
+            class="input__month"
             type="text"
             name="nummonth"
             id="nummonth"
             placeholder="MM"
           />
 
-          <input autocomplete="off"
-            class="input__month"
+          <input
+            autocomplete="off"
+            class="input__year"
             type="text"
-            name="numday"
-            id="numday"
-            placeholder="DD"
+            name="numyear"
+            id="numyear"
+            placeholder="YYYY"
           />
-         
-          
-            <input autocomplete="off"
-              class="input__year"
-              type="text"
-              name="numyear"
-              id="numyear"
-              placeholder="YYYY"
-            />
-
         </div>
         <div class="erro">
           <span class="error1">This space is incorret</span>
           <span class="error2">This space is incorret</span>
           <span class="error3">This space is incorret</span>
+          
         </div>
-        
+
         <div class="linha">
-          <button  class="botao">
+          <button class="botao">
             <img src="assets/images/icon-arrow.svg" alt="" />
           </button>
         </div>
@@ -78,22 +79,21 @@
         <div class="resultado">
           <div class="box">
             <div class="row">
-              <span class="roxo">- -</span>
+              <span class="roxo ano">- -</span>
               <span class="years">years</span>
             </div>
             <div class="row">
-              <span class="roxo"
-              >- -</span>
+              <span class="roxo mes">- -</span>
               <span class="months">months</span>
             </div>
             <div class="row">
-              <span class="roxo">- -</span>
+              <span class="roxo dia">- -</span>
               <span class="days">days</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>

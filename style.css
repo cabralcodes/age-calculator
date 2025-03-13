@@ -19,24 +19,19 @@ html * {
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: url("/assets/fonts/Poppins-Bold.ttf") ;
+  src: url("/assets/fonts/Poppins-Bold.ttf");
 }
-
 
 @font-face {
   font-family: "Poppins-ExtraBoldItalic";
   src: url("/assets/fonts/Poppins-ExtraBoldItalic.ttf");
 }
 
-
-
 html,
 body {
   height: 100%;
   margin: 0;
 }
-
-
 
 .fundo {
   display: flex;
@@ -51,6 +46,8 @@ body {
   width: 300px;
   height: 450px;
   border-radius: 15px 15px 60px 15px;
+  padding-top: 30px;
+  padding-left: 15px;
 }
 
 .calculator__label {
@@ -59,27 +56,18 @@ body {
   font-size: 10px;
   color: hsl(0, 1%, 44%);
   letter-spacing: 3px;
-  margin-top: 30px;
-  margin-left: 15px;
+
 }
 
 .label__day {
-  margin-right: 60px;
+  padding-right: 50px;
   margin-left: 10px;
 }
 
 .label__month {
-  margin-right: 30px;
-  
+  padding-right: 30px;
 }
 
-
-
-.calculator__input {
-  
-  margin-left:20px;
-
-}
 
 
 .linha {
@@ -106,6 +94,7 @@ body {
   margin-left: 5px;
   margin-right: 15px;
   margin-top: 10px;
+  
 }
 
 input::placeholder {
@@ -147,11 +136,17 @@ input::placeholder {
   height: 55px;
   border-radius: 50%;
   border: none;
+  transition: 0.1s;
+
+  &:active {
+    /* transition: 0.1s; */
+    transform: scale(0.9);
+  }
 }
 
 .botao_resultado {
   background-color: hsl(0, 1%, 44%);
-  width:55px ;
+  width: 55px;
   height: 55px;
   border-radius: 50%;
   border: none;
@@ -162,12 +157,11 @@ img {
   height: auto;
 }
 
-
 .days,
 .months,
 .years {
   display: flex;
-  font-family: "Poppins-ExtraBoldItalic",sans-serif;
+  font-family: "Poppins-ExtraBoldItalic", sans-serif;
   font-weight: 900;
   font-size: 40px;
 }
@@ -177,10 +171,7 @@ img {
   justify-content: center;
   flex-direction: column;
   margin-left: 20px;
-
 }
-
-
 
 .row {
   display: flex;
@@ -209,31 +200,32 @@ img {
   padding-right: 10px;
 }
 
- .erro  {  
+.error1, .error2  {
   display: none;
   font-size: 9px;
-  font-family: 'Poppins-Italic', sans-serif;
+  font-family: "Poppins-Italic", sans-serif;
   font-weight: 600;
   color: rgba(255, 0, 0, 0.918);
 }
 
-.error1-disabled {
-  display: block;
-}
-  
-.error2-disabled {
-  display: block;
-}
-
-.error3-disabled{
-  display: block;
+.error3 {
+  display: none;
+  font-size: 8px;
+  font-family: "Poppins-Italic", sans-serif;
+  font-weight: 600;
+  color: rgba(255, 0, 0, 0.918);
 }
 
-@media (min-width:768px) {
+
+.error1-disabled, .error2-disabled, .error3-disabled {
+  display: inline;
+}
+
+
+@media (min-width: 768px) {
   .calculator {
     width: 450px;
     height: 450px;
-
   }
   .calculator__label {
     margin-left: 20px;
@@ -243,21 +235,24 @@ img {
     margin-left: 20px;
   }
 
-  .erro {
-    display: none;
-  
-  }
 
-  .input__day, .input__month, .input__year {
+
+
+
+  
+
+  .input__day,
+  .input__month,
+  .input__year {
     width: 100px;
   }
 
- .label__day {
-    margin-right: 80px;
+  .label__day {
+    padding-right: 80px;
   }
 
   .label__month {
-    margin-right: 60px;
+    padding-right: 60px;
   }
 
   .error1 {
@@ -269,13 +264,14 @@ img {
     padding-right: 20px;
   }
 
+
+
   .linha {
     width: 90%;
     display: flex;
-  align-items: center;
-  align-content: end;
-  justify-content: end;
-
+    align-items: center;
+    align-content: end;
+    justify-content: end;
   }
 
   .resultado .box span.roxo {
@@ -289,32 +285,32 @@ img {
   .row {
     height: 60px;
   }
-
 }
 
-@media (min-width:1024px){
+@media (min-width: 1024px) {
   .calculator {
     width: 600px;
   }
 
-  .input__day, .input__month, .input__year {
+  .input__day,
+  .input__month,
+  .input__year {
     width: 100px;
   }
 
 
-  .calculator .resultado .box .row span.years  {
+
+  .calculator .resultado .box .row span.years {
     font-size: 50px;
   }
-  .calculator .resultado .box .row span.months  {
+  .calculator .resultado .box .row span.months {
     font-size: 50px;
   }
-  .calculator .resultado .box .row span.days  {
+  .calculator .resultado .box .row span.days {
     font-size: 50px;
   }
 
   .calculator .resultado .box span.roxo {
     font-size: 50px;
   }
-
-
 }
